@@ -10,3 +10,6 @@ Capslock & h::Send {Left}
 Capslock & j::Send {Down}
 Capslock & k::Send {Up}
 Capslock & l::Send {Right}
+
+; remap r-alt to windows key
+RAlt::LWin
