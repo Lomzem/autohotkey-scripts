@@ -11,5 +11,5 @@ Capslock & j::Send {Down}
 Capslock & k::Send {Up}
 Capslock & l::Send {Right}
 
-; remap r-alt to windows key
-RAlt::LWin
+; remap capslock + o to alt + F4
+Capslock & o::Send !{F4}
