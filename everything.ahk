@@ -17,3 +17,8 @@ RAlt::LWin
 
 ; remap capslock + o to alt + F4
 Capslock & o::Send !{F4}
+
+; flip ctrl+space and alt+space
+LCtrl & Space::Send !{Space}
+LAlt & Space::Send ^{Space}
+
