@@ -12,8 +12,23 @@ Capslock & h::Send {Left}
 Capslock & j::Send {Down}
 Capslock & k::Send {Up}
 Capslock & l::Send {Right}
-Capslock & f::Send ^{Right}
-Capslock & b::Send ^{Left}
+
+; Capslock & w::Send ^{Right}
+; Capslock & b::Send ^{Left}
+
+CapsLock & w:: 
+    If (GetKeyState("Shift", "P"))
+        Send +^{Right}
+    Else
+        Send ^{Right}
+return
+
+CapsLock & b:: 
+    If (GetKeyState("Shift", "P"))
+        Send +^{Left}
+    Else
+        Send ^{Left}
+return
 
 RAlt::LWin
 
