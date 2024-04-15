@@ -1,5 +1,7 @@
+SetCapsLockState AlwaysOff
+
 ; tos-mouse
-#t::Run, "C:/Users/Lomzem/coding/rust/tos-mouse/tos-mouse/target/debug/tos-mouse.exe", , Hide
+#t::Run, "C:/Users/Lomzem/coding/bin/tos-select.exe", , Hide
 
 ; bracket escape
 ^[::Send, {Esc 3}
