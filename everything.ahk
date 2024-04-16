@@ -8,10 +8,34 @@ SetCapsLockState AlwaysOff
 
 ; Caps lock vim bindings
 Capslock::Return
-Capslock & h::Send {Left}
-Capslock & j::Send {Down}
-Capslock & k::Send {Up}
-Capslock & l::Send {Right}
+
+Capslock & h::
+    If (GetKeyState("Shift", "P"))
+        Send +{Left}
+    Else
+        Send {Left}
+return
+
+Capslock & j::
+    If (GetKeyState("Shift", "P"))
+        Send +{Down}
+    Else
+        Send {Down}
+return
+
+Capslock & k::
+    If (GetKeyState("Shift", "P"))
+        Send +{Up}
+    Else
+        Send {Up}
+return
+
+Capslock & l::
+    If (GetKeyState("Shift", "P"))
+        Send +{Right}
+    Else
+        Send {Right}
+return
 
 ; Capslock & w::Send ^{Right}
 ; Capslock & b::Send ^{Left}
@@ -29,6 +53,9 @@ CapsLock & b::
     Else
         Send ^{Left}
 return
+
+CapsLock & 0::Send {Home}
+CapsLock & 4::Send {End}
 
 RAlt::LWin
 
