@@ -90,14 +90,21 @@ IfWinNotExist, ahk_class CabinetWClass
 WinActivate ahk_class CabinetWClass
 }
 
-switchToSumatra(){
-IfWinNotExist, ahk_class SUMATRA_PDF_FRAME
+; switchToSumatra(){
+; IfWinNotExist, ahk_class SUMATRA_PDF_FRAME
+; 	return
+; WinActivate ahk_class SUMATRA_PDF_FRAME
+; }
+
+switchToZathura(){
+IfWinNotExist, ahk_class RAIL_WINDOW
 	return
-WinActivate ahk_class SUMATRA_PDF_FRAME
+WinActivate ahk_class RAIL_WINDOW
 }
+
 
 
 CapsLock & w::switchToWT()
 CapsLock & e::switchToBrave()
-CapsLock & q::switchToSumatra()
+CapsLock & q::switchToZathura()
 #e::switchToFE()
