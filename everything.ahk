@@ -9,6 +9,8 @@ SetCapsLockState AlwaysOff
 ; Caps lock vim bindings
 Capslock::Return
 
+Capslock & Space::Send {Esc 3}
+
 Capslock & h::
     If (GetKeyState("Shift", "P"))
         Send +{Left}
@@ -77,7 +79,7 @@ WinActivate ahk_class Chrome_WidgetWin_1
 }
 
 switchToWT(){
-WinMinimizeAll
+; WinMinimizeAll
 IfWinNotExist, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 	; Run, WindowsTerminal.exe
 	Run, wt.exe
